@@ -28,6 +28,8 @@ if (typeof window === "undefined") {
   const decryptFile = require("./uploadEncrypted/node/decryptFile");
   const textUploadEncrypted = require("./uploadEncrypted/node/textUploadEncrypted");
 
+  const uploadFileRaw = require("./upload/uploadFileRaw");
+
   module.exports = {
     upload,
     addCid,
@@ -49,13 +51,17 @@ if (typeof window === "undefined") {
     revokeFileAccess,
     textUploadEncrypted,
     getAccessConditions,
-    uploadText
+    uploadText,
+
+    uploadFileRaw,
   };
 } else {
   const upload = require("./upload/browser");
   const uploadText = require("./upload/uploadTextBrowser");
   const decryptFile = require("./uploadEncrypted/browser/decryptFile");
   const uploadEncrypted = require("./uploadEncrypted/browser/index.js");
+  
+  const uploadFileRaw = require("./upload/browserRaw")
 
   module.exports = {
     upload,
@@ -74,6 +80,8 @@ if (typeof window === "undefined") {
     shareFile,
     accessCondition,
     revokeFileAccess,
-    getAccessConditions
+    getAccessConditions,
+    
+    uploadFileRaw
   };
 }

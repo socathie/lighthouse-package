@@ -26,6 +26,12 @@ export function upload(
   uploadProgressCallback?: any
 ): Promise<{ data: IpfsFileResponse }>;
 
+export function uploadFileRaw(
+  path: string,
+  apiKey: string,
+  uploadProgressCallback?: any
+): Promise<{ data: IpfsFileResponse }>;
+
 export function uploadBuffer(
   buffer: any,
   apiKey: string,
