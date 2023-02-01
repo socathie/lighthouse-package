@@ -27,7 +27,6 @@ if (typeof window === "undefined") {
   const uploadEncrypted = require("./uploadEncrypted/node");
   const decryptFile = require("./uploadEncrypted/node/decryptFile");
   const textUploadEncrypted = require("./uploadEncrypted/node/textUploadEncrypted");
-
   const uploadFileRaw = require("./upload/uploadFileRaw");
 
   module.exports = {
@@ -52,7 +51,6 @@ if (typeof window === "undefined") {
     textUploadEncrypted,
     getAccessConditions,
     uploadText,
-
     uploadFileRaw,
   };
 } else {
@@ -60,8 +58,7 @@ if (typeof window === "undefined") {
   const uploadText = require("./upload/uploadTextBrowser");
   const decryptFile = require("./uploadEncrypted/browser/decryptFile");
   const uploadEncrypted = require("./uploadEncrypted/browser/index.js");
-  
-  const uploadFileRaw = require("./upload/browserRaw")
+  const uploadFileRaw = require("./upload/browserRaw");
 
   module.exports = {
     upload,
@@ -81,7 +78,6 @@ if (typeof window === "undefined") {
     accessCondition,
     revokeFileAccess,
     getAccessConditions,
-    
-    uploadFileRaw
+    uploadFileRaw,
   };
 }
