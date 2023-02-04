@@ -28,7 +28,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@lighthouse-web3/kavach": "github:socathie/encryption-sdk",
+    "@lighthouse-web3/kavach": "^0.1.2",
     "@peculiar/webcrypto": "^1.4.0",
     "axios": "^0.24.0",
     "base-path-converter": "^1.0.2",
